@@ -1,0 +1,170 @@
+$iris: #7d52f5
+
+@font-face
+    font-family: "XITS"
+    src: url("asset/font/XITS-Regular.otf")
+
+@font-face
+    font-family: "XITSMath"
+    src: url("asset/font/XITSMath-Regular.otf")
+
+@font-face
+    font-family: "I.Ming"
+    src: url("asset/font/I.Ming-8.00.ttf")
+
+@mixin shadow($color)
+    filter: drop-shadow(5px 5px 5px $color)
+
+@mixin vert-center
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+@mixin text-fonts
+    font-family: "XITS", "I.Ming", "XITSMath"
+
+@mixin panel-material($url, $color)
+    background: $url repeat top
+    background-size: contain
+    background-color: rgba($color, 0.8)
+    background-blend-mode: multiply
+
+    border-radius: 5px
+    @include shadow(#000000ff)
+
+body
+    margin: 0
+    padding: 0
+div
+    margin: 0
+    padding: 0
+span
+    margin: 0
+    padding: 0
+
+body
+    background: url("asset/svg/body-noise.svg") repeat top
+    background-size: auto auto
+
+a
+    color: inherit
+    outline: none
+    text-decoration: none
+
+p
+    margin: 1.2vh 0
+
+header
+    height: 12vh
+    margin: 2vh 1vw 0 1vw
+    padding: 0
+
+    text-shadow: 1px 1px 1px #000000ff
+    @include panel-material(url("asset/svg/header-noise.svg"), $iris)
+
+nav
+    display: flex
+    justify-content: space-between
+    padding: 0 2vw
+
+    .button
+        height: 12vh
+        font-family: Cinzel
+        font-size: 5vh
+        text-align: center
+        @include vert-center
+
+        color: #9c254d
+    .button:hover
+        color: #d23369
+    .active-tab
+        color: #d23369
+
+#main
+    display: flex
+    justify-content: center
+#content
+    width: 56vw
+    height: auto
+    margin: 2vh 0
+    padding: 2vh 1vw
+    background-color: #00000022
+
+    display: flex
+    justify-content: center
+
+    font-size: 1.6vw
+    @include text-fonts
+    .math
+        font-size: 1.3vw
+
+#home-vfill
+    height: 86vh
+    @include vert-center
+#home
+    width: 60vw
+    height: 42.5vw
+    background: url("asset/img/home.jpg") top
+    background-size: cover
+    border-radius: 5px
+    @include shadow(#000000ff)
+
+
+#b1
+    height: 141.48vw
+    background: url("asset/img/about.jpg") top
+    background-size: 100% 100%
+
+
+.snippet
+    margin: 0 0 -2px 0
+    padding: 1vh 1vw
+    border: 2px solid #606060
+    background-color: #faeab199
+
+.snippet-adjuncts
+    font-size: 1.2vw
+    font-family: SansSerif
+    display: flex
+    justify-content: right
+    span
+        padding: 0 0.5vw
+
+.border-line
+    border: solid 1px
+    margin: 2vh 0 0 0
+
+@mixin panel
+    width: 20vw
+    height: 360px
+    margin: 2vh 1vw
+
+@mixin links
+    padding: 2vh 2vw
+
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    font-family: Cinzel
+    font-size: 1.6vw
+
+#left-panel
+    @include panel
+    @include panel-material(url("asset/svg/panel-noise.svg"), #22a39f)
+    #friend-links
+        @include links
+        p
+            font-size: 1.2vw
+
+#right-panel
+    @include panel
+    @include panel-material(url("asset/svg/panel-noise.svg"), #ff8fb1)
+    #personal-links
+        @include links
+        i
+            padding: 1vw
+        p
+            display: flex
+            justify-content: right
+            font-size: 1.2vw
