@@ -5,6 +5,10 @@ use snippet::Snippet;
 pub fn shatters(props: &Props) -> Html {
     html! {
         <div id="shatters">
+            <Snippet signature="浅原つぼみ" modified_time="2022/12/14 03:09">
+                <p>{"我爱你们，我爱全地上所有的人。"}</p>
+                <p>{"正因如此，我必须一个人孤独死去。"}</p>
+            </Snippet>
             <Snippet signature="浅原つぼみ" modified_time="2022/12/11 03:21">
                 <p>{"被好多好多的她和她们传唱过的隐秘童话。"}</p>
                 <p class="math">{r"\(zx=zy\to x=y\)"}</p>
