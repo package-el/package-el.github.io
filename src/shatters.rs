@@ -5,6 +5,9 @@ use snippet::Snippet;
 pub fn shatters(props: &Props) -> Html {
     html! {
         <div id="shatters">
+            <Snippet signature="浅原つぼみ" modified_time="2022/12/14 17:24">
+                <p>{"“这是我和你的最后一笔交易了，老东西。一分钟之后，就连牛顿定律也管不着我啦！”"}</p>
+            </Snippet>
             <Snippet signature="Cecilia" modified_time="2022/12/14 09:08">
                 <p>{"尝试用GitHub Actions自动部署，发现每次都要从头重新编译一遍Rust的依赖，好慢呜。"}</p>
                 <p>{"不懂懂😵‍💫"}</p>
