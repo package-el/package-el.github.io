@@ -5,6 +5,9 @@ use snippet::Snippet;
 pub fn shatters(props: &Props) -> Html {
     html! {
         <div id="shatters">
+            <Snippet signature="Cecilia" modified_time="2022/12/22 14:17">
+                <p>{"在自家服务器上搭了VaultWarden，好开心。计划再搭个RSSHub什么的😊"}</p>
+            </Snippet>
             <Snippet signature="浅原つぼみ" modified_time="2022/12/14 17:24">
                 <p>{"“这是我和你的最后一笔交易了，老东西。一分钟之后，就连牛顿定律也管不着我啦！”"}</p>
             </Snippet>
