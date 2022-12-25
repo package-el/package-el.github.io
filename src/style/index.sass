@@ -8,10 +8,6 @@ $iris: #7d52f5
     font-family: "XITSMath"
     src: url("asset/font/XITSMath-Regular.otf")
 
-@font-face
-    font-family: "I.Ming"
-    src: url("asset/font/I.Ming-8.00.ttf")
-
 @mixin shadow($color)
     filter: drop-shadow(5px 5px 5px $color)
 
@@ -21,7 +17,7 @@ $iris: #7d52f5
     justify-content: center
 
 @mixin text-fonts
-    font-family: "XITS", "I.Ming", "XITSMath"
+    font-family: "XITS", "Noto Serif SC", "XITSMath"
 
 @mixin panel-material($url, $color)
     background: $url repeat top
@@ -35,6 +31,7 @@ $iris: #7d52f5
 body
     margin: 0
     padding: 0
+    text-rendering: geometricPrecision
 div
     margin: 0
     padding: 0
@@ -93,10 +90,12 @@ nav
     display: flex
     justify-content: center
 
-    font-size: 1.6vw
+    font-size: 15px
     @include text-fonts
     .math
-        font-size: 1.3vw
+        font-size: 14px
+    a
+        color: #eb455f
 
 #home-vfill
     height: 86vh
@@ -120,10 +119,10 @@ nav
     margin: 0 0 -2px 0
     padding: 1vh 1vw
     border: 2px solid #606060
-    background-color: #faeab199
+    background-color: #e7e2be99
 
 .snippet-adjuncts
-    font-size: 1.2vw
+    font-size: 12px
     font-family: SansSerif
     display: flex
     justify-content: right

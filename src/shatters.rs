@@ -5,6 +5,11 @@ use snippet::Snippet;
 pub fn shatters(props: &Props) -> Html {
     html! {
         <div id="shatters">
+	    <Snippet signature="Cecilia" modified_time="2022/12/26 1:22">
+	        <p>{"为知乎写了"}<a href="https://github.com/package-el/my-stylus/blob/master/zhihu.css">{"阅读模式CSS"}</a>
+	        {"，可以通过在Stylus或类似插件中加载来使用。效果图见"}
+	        <a href="https://twitter.com/CeciliaK__/status/1607063193347850242">{"这条推文"}</a>{"。"}</p>
+	    </Snippet>
             <Snippet signature="Cecilia" modified_time="2022/12/22 14:17">
                 <p>{"在自家服务器上搭了VaultWarden，好开心。计划再搭个RSSHub什么的😊"}</p>
             </Snippet>
